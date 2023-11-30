@@ -1,17 +1,5 @@
-const readline = require('readline');
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+const fs = require("fs");
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+const input = fs.readFileSync(filePath).toString().split("\n")[0];
 
-  rl.question('Enter N: ', (N) => {
-  rl.question('Enter A: ', (inputA) => {
-    const A = inputA.split(' ').map(Number);
-
-  console.log(N);
-  console.log(...A);
-
-  rl.close();
-    
-});
-});
+console.log(input);
