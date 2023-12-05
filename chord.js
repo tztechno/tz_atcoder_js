@@ -1,18 +1,13 @@
-const readline = require('readline');
+const fs = require("fs");
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+const s = fs.readFileSync(filePath).toString().split("\n")[0];
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+const name = ["ACE", "BDF", "CEG", "DFA", "EGB", "FAC", "GBD"];
 
-rl.question('Enter a string: ', (s) => {
-  const name = ["ACE", "BDF", "CEG", "DFA", "EGB", "FAC", "GBD"];
-
-  if (name.includes(s)) {
+if (name.includes(s)) {
     console.log('Yes');
-  } else {
+} else {
     console.log('No');
-  }
+  };
 
-  rl.close();
-});
+
