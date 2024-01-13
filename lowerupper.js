@@ -6,7 +6,7 @@ const fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
 const S = fs.readFileSync(filePath).toString().split("\n")[0];
 
-const n: number = S.length;
+const n = S.length;
 
 for (let i = 0; i < n; i++) {
     if ((i % 2 === 0 && S[i] !== S[i].toLowerCase()) || (i % 2 === 1 && S[i] !== S[i].toUpperCase())) {
