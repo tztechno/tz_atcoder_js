@@ -61,3 +61,14 @@ for (let i=0; i<5; i++) {
     }
 }
 #####################################
+const fs = require("fs");
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+const input = fs.readFileSync(filePath).toString().split("\n")[0];
+const X = input.split(' ').map(Number);
+for (let i=0; i<5; i++) {
+    if (X[i]==0) {
+        console.log(i+1);
+        break;
+    }
+}
+#####################################
