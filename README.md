@@ -2,10 +2,10 @@
 
 ### 新採用
 
-const main = (input) => {
-    const S = input.trim();
-}
-main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+    const main = (input) => {
+        const S = input.trim();
+    }
+    main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 
 
 
