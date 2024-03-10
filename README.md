@@ -4,7 +4,6 @@
 
 const main = (input) => {
     const S = input.trim();
-
 }
 main(require('fs').readFileSync('/dev/stdin', 'utf8'));
 
