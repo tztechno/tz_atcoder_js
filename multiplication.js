@@ -25,3 +25,17 @@ const main = (input) => {
 }
 main(require("fs").readFileSync("/dev/stdin", "utf8"));
 ################################
+const inputNumbers = require("fs").readFileSync("/dev/stdin", "utf8").trim().split("\n")[0];
+
+const calculator = {
+  inputNumbers: inputNumbers,
+  calc: function() {
+    var numbers = this.inputNumbers.split(' ').map(Number);
+    this.ans = numbers.reduce((acc, curr) => acc * curr, 1);
+    this.showResult = true; 
+  }
+};
+
+calculator.calc();
+console.log(calculator.ans);
+################################
