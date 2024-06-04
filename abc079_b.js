@@ -2,6 +2,31 @@ abc079_b.js
 ##########################################
 ##########################################
 ##########################################
+const n = BigInt(require('fs').readFileSync(0, 'utf8').trim());
+
+function lucas_number(n) {
+  if (n === 0n) {
+    return 2n;
+  } else if (n === 1n) {
+    return 1n;
+  } else {
+    let a = 2n;
+    let b = 1n;
+    for (let i = 2n; i <= n; i++) {
+      const temp = a + b;
+      a = b;
+      b = temp;
+    }
+    return b;
+  }
+}
+
+function calculate() {
+  const result = lucas_number(n);
+  return result;
+}
+
+console.log(calculate().toString());
 ##########################################
 function Main(input){
   min = 1e9
