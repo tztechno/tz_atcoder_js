@@ -1,17 +1,43 @@
 # tz_atcoder_js
 
-### 新採用
+### latest
 
-    const main = (input) => {
-        const S = input.trim();
-    }
-    main(require('fs').readFileSync('/dev/stdin', 'utf8'));
+---
+```
 
+```
+---
+```
 
+```
+---
+```
 
-### 旧採用
+```
+---
+```
 
-    const fs = require("fs");  
-    const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";  
-    const input = fs.readFileSync(filePath).toString().split("\n")[0];  
+```
+---
+```
+
+```
+---
+```
+
+```
+---
+```
+
+```
+---
+```
+Javascriptで数字文字列を各文字のリストにする
+const charList = numberString.split("");
+各文字を数字に変える
+const numberList = charList.map(char => parseInt(char, 10));
+数字リストの合計値を求める
+const sum = numberList.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+```
+---
 
