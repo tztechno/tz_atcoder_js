@@ -24,11 +24,16 @@
 ```
 ---
 ```
-
+for (let i = 0; i < N * 10; i++) {
+  for (let j = 0; j < N; j++) {
 ```
 ---
 ```
-
+const fs = require("fs");
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+const input = fs.readFileSync(filePath).toString().trim().split("\n");
+const N = parseInt(input[0]); 
+let A = input[1].split(" ").map(Number); 
 ```
 ---
 ```
